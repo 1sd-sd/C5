@@ -1,0 +1,238 @@
+{
+  "tool": "skilllens",
+  "generated_at": "2026-11-04T14:24:31+08:00",
+  "package": {
+    "source": "examples\\draft-skill",
+    "kind": "dir",
+    "name": "draft-skill",
+    "files": 3,
+    "bytes": 405,
+    "error": ""
+  },
+  "score": 50,
+  "grade": "D",
+  "verdict": "FAIL",
+  "caps": [],
+  "dimensions": [
+    {
+      "code": "D1",
+      "name": "触发力",
+      "earned": 14,
+      "possible": 25,
+      "percent": 56
+    },
+    {
+      "code": "D2",
+      "name": "结构",
+      "earned": 20,
+      "possible": 20,
+      "percent": 100
+    },
+    {
+      "code": "D3",
+      "name": "可执行",
+      "earned": 0,
+      "possible": 24,
+      "percent": 0
+    },
+    {
+      "code": "D4",
+      "name": "可维护",
+      "earned": 13,
+      "possible": 25,
+      "percent": 52
+    }
+  ],
+  "issues": [
+    {
+      "rule": "TRG001",
+      "dimension": "D1",
+      "level": "error",
+      "passed": true,
+      "weight": 8,
+      "title": "frontmatter 可解析且含 name/description",
+      "evidence": "name='draft-skill', description 28 字符",
+      "fix": ""
+    },
+    {
+      "rule": "TRG002",
+      "dimension": "D1",
+      "level": "error",
+      "passed": true,
+      "weight": 6,
+      "title": "name 为 kebab-case 且与目录名一致",
+      "evidence": "draft-skill",
+      "fix": ""
+    },
+    {
+      "rule": "TRG003",
+      "dimension": "D1",
+      "level": "warn",
+      "passed": false,
+      "weight": 6,
+      "title": "description 长度 80–1024 字符",
+      "evidence": "description 仅 28 字符（< 80，模型很难判断何时触发）",
+      "fix": "把'做什么+什么时候用+输入输出'压进 80–500 字"
+    },
+    {
+      "rule": "TRG004",
+      "dimension": "D1",
+      "level": "warn",
+      "passed": false,
+      "weight": 5,
+      "title": "description 含触发语与用户原话",
+      "evidence": "description 只描述功能，没有'什么时候用'的触发语",
+      "fix": "加 '适用于/Use when …' 并抄 2 条用户会说的话"
+    },
+    {
+      "rule": "STR001",
+      "dimension": "D2",
+      "level": "error",
+      "passed": true,
+      "weight": 6,
+      "title": "有 What/Purpose 段",
+      "evidence": "有 What/Purpose 段",
+      "fix": ""
+    },
+    {
+      "rule": "STR002",
+      "dimension": "D2",
+      "level": "warn",
+      "passed": true,
+      "weight": 4,
+      "title": "有 When to use 段",
+      "evidence": "有 When 段",
+      "fix": ""
+    },
+    {
+      "rule": "STR003",
+      "dimension": "D2",
+      "level": "error",
+      "passed": true,
+      "weight": 4,
+      "title": "有 Input 与 Output 段",
+      "evidence": "Input/Output 段齐全",
+      "fix": ""
+    },
+    {
+      "rule": "STR004",
+      "dimension": "D2",
+      "level": "warn",
+      "passed": true,
+      "weight": 3,
+      "title": "Steps 至少 3 条",
+      "evidence": "3 条步骤",
+      "fix": ""
+    },
+    {
+      "rule": "STR005",
+      "dimension": "D2",
+      "level": "info",
+      "passed": true,
+      "weight": 3,
+      "title": "说明所需工具/运行时",
+      "evidence": "有 Tools/依赖段",
+      "fix": ""
+    },
+    {
+      "rule": "EXE001",
+      "dimension": "D3",
+      "level": "error",
+      "passed": false,
+      "weight": 8,
+      "title": "有代码块或 scripts/",
+      "evidence": "既没有代码块也没有 scripts/，执行细节全靠脑补",
+      "fix": "把关键命令写成 ```bash 块"
+    },
+    {
+      "rule": "EXE003",
+      "dimension": "D3",
+      "level": "error",
+      "passed": false,
+      "weight": 6,
+      "title": "输入契约明确",
+      "evidence": "Input 段过于笼统（5 字符，无格式/示例）",
+      "fix": "给出输入格式/字段/示例"
+    },
+    {
+      "rule": "EXE004",
+      "dimension": "D3",
+      "level": "warn",
+      "passed": false,
+      "weight": 5,
+      "title": "输出契约明确",
+      "evidence": "Output 段没说清产出物的格式",
+      "fix": "给出产出格式与样例"
+    },
+    {
+      "rule": "EXE005",
+      "dimension": "D3",
+      "level": "info",
+      "passed": false,
+      "weight": 5,
+      "title": "有失败路径说明",
+      "evidence": "没有失败路径说明（输入不合规时怎么办）",
+      "fix": "补一段'输入不合规时怎么办'"
+    },
+    {
+      "rule": "MNT001",
+      "dimension": "D4",
+      "level": "warn",
+      "passed": true,
+      "weight": 5,
+      "title": "SKILL.md ≤ 500 行",
+      "evidence": "33 行",
+      "fix": ""
+    },
+    {
+      "rule": "MNT002",
+      "dimension": "D4",
+      "level": "info",
+      "passed": true,
+      "weight": 4,
+      "title": "体积分层合理",
+      "evidence": "0KB",
+      "fix": ""
+    },
+    {
+      "rule": "MNT003",
+      "dimension": "D4",
+      "level": "warn",
+      "passed": false,
+      "weight": 4,
+      "title": "有 examples/demo",
+      "evidence": "没有 examples/ 或 demo，别人不知道怎么验证它好用",
+      "fix": "加一个最小可跑示例"
+    },
+    {
+      "rule": "MNT004",
+      "dimension": "D4",
+      "level": "error",
+      "passed": false,
+      "weight": 4,
+      "title": "无占位符残留",
+      "evidence": "SKILL.md 仍含占位符：TODO",
+      "fix": "删掉 TODO/待补充 并写实"
+    },
+    {
+      "rule": "MNT005",
+      "dimension": "D4",
+      "level": "warn",
+      "passed": false,
+      "weight": 4,
+      "title": "无垃圾文件",
+      "evidence": "夹带垃圾文件：~$meeting.docx",
+      "fix": "打包前删除 ~$/tmp/.DS_Store"
+    },
+    {
+      "rule": "MNT006",
+      "dimension": "D4",
+      "level": "error",
+      "passed": true,
+      "weight": 4,
+      "title": "无明文密钥",
+      "evidence": "未发现明文密钥",
+      "fix": ""
+    }
+  ]
+}

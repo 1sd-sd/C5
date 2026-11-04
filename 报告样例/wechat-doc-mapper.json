@@ -1,0 +1,248 @@
+{
+  "tool": "skilllens",
+  "generated_at": "2026-11-04T14:24:31+08:00",
+  "package": {
+    "source": "..\\..\\挑战_C4 技能分享与传播_4cdgor_完整资料\\materials\\wechat-doc-mapper.skill",
+    "kind": "zip",
+    "name": "wechat-doc-mapper",
+    "files": 3,
+    "bytes": 39807,
+    "error": ""
+  },
+  "score": 82,
+  "grade": "B",
+  "verdict": "PASS",
+  "caps": [],
+  "dimensions": [
+    {
+      "code": "D1",
+      "name": "触发力",
+      "earned": 25,
+      "possible": 25,
+      "percent": 100
+    },
+    {
+      "code": "D2",
+      "name": "结构",
+      "earned": 12,
+      "possible": 20,
+      "percent": 60
+    },
+    {
+      "code": "D3",
+      "name": "可执行",
+      "earned": 24,
+      "possible": 30,
+      "percent": 80
+    },
+    {
+      "code": "D4",
+      "name": "可维护",
+      "earned": 21,
+      "possible": 25,
+      "percent": 84
+    }
+  ],
+  "issues": [
+    {
+      "rule": "TRG001",
+      "dimension": "D1",
+      "level": "error",
+      "passed": true,
+      "weight": 8,
+      "title": "frontmatter 可解析且含 name/description",
+      "evidence": "name='wechat-doc-mapper', description 938 字符",
+      "fix": ""
+    },
+    {
+      "rule": "TRG002",
+      "dimension": "D1",
+      "level": "error",
+      "passed": true,
+      "weight": 6,
+      "title": "name 为 kebab-case 且与目录名一致",
+      "evidence": "wechat-doc-mapper",
+      "fix": ""
+    },
+    {
+      "rule": "TRG003",
+      "dimension": "D1",
+      "level": "warn",
+      "passed": true,
+      "weight": 6,
+      "title": "description 长度 80–1024 字符",
+      "evidence": "938 字符",
+      "fix": ""
+    },
+    {
+      "rule": "TRG004",
+      "dimension": "D1",
+      "level": "warn",
+      "passed": true,
+      "weight": 5,
+      "title": "description 含触发语与用户原话",
+      "evidence": "含触发线索 ['use when', 'whenever'] + 引号示例",
+      "fix": ""
+    },
+    {
+      "rule": "STR001",
+      "dimension": "D2",
+      "level": "error",
+      "passed": true,
+      "weight": 6,
+      "title": "有 What/Purpose 段",
+      "evidence": "有 What/Purpose 段",
+      "fix": ""
+    },
+    {
+      "rule": "STR002",
+      "dimension": "D2",
+      "level": "warn",
+      "passed": false,
+      "weight": 4,
+      "title": "有 When to use 段",
+      "evidence": "缺少 When to use（触发条件）",
+      "fix": "加 '## 什么时候用' 列 3 个场景"
+    },
+    {
+      "rule": "STR003",
+      "dimension": "D2",
+      "level": "error",
+      "passed": false,
+      "weight": 4,
+      "title": "有 Input 与 Output 段",
+      "evidence": "缺少 Input 段",
+      "fix": "分别加 '## 输入' '## 输出'"
+    },
+    {
+      "rule": "STR004",
+      "dimension": "D2",
+      "level": "warn",
+      "passed": true,
+      "weight": 3,
+      "title": "Steps 至少 3 条",
+      "evidence": "11 条步骤",
+      "fix": ""
+    },
+    {
+      "rule": "STR005",
+      "dimension": "D2",
+      "level": "info",
+      "passed": true,
+      "weight": 3,
+      "title": "说明所需工具/运行时",
+      "evidence": "正文提到工具/运行时（可显式补一个 Tools 段）",
+      "fix": ""
+    },
+    {
+      "rule": "EXE001",
+      "dimension": "D3",
+      "level": "error",
+      "passed": true,
+      "weight": 8,
+      "title": "有代码块或 scripts/",
+      "evidence": "11 个代码块",
+      "fix": ""
+    },
+    {
+      "rule": "EXE002",
+      "dimension": "D3",
+      "level": "error",
+      "passed": true,
+      "weight": 6,
+      "title": "引用的本地文件都存在",
+      "evidence": "1 处引用全部存在",
+      "fix": ""
+    },
+    {
+      "rule": "EXE003",
+      "dimension": "D3",
+      "level": "error",
+      "passed": false,
+      "weight": 6,
+      "title": "输入契约明确",
+      "evidence": "没有 Input 段",
+      "fix": "给出输入格式/字段/示例"
+    },
+    {
+      "rule": "EXE004",
+      "dimension": "D3",
+      "level": "warn",
+      "passed": true,
+      "weight": 5,
+      "title": "输出契约明确",
+      "evidence": "Output 段给出格式/模板",
+      "fix": ""
+    },
+    {
+      "rule": "EXE005",
+      "dimension": "D3",
+      "level": "info",
+      "passed": true,
+      "weight": 5,
+      "title": "有失败路径说明",
+      "evidence": "提到失败/边界处理",
+      "fix": ""
+    },
+    {
+      "rule": "MNT001",
+      "dimension": "D4",
+      "level": "warn",
+      "passed": true,
+      "weight": 5,
+      "title": "SKILL.md ≤ 500 行",
+      "evidence": "323 行",
+      "fix": ""
+    },
+    {
+      "rule": "MNT002",
+      "dimension": "D4",
+      "level": "info",
+      "passed": true,
+      "weight": 4,
+      "title": "体积分层合理",
+      "evidence": "13KB",
+      "fix": ""
+    },
+    {
+      "rule": "MNT003",
+      "dimension": "D4",
+      "level": "warn",
+      "passed": false,
+      "weight": 4,
+      "title": "有 examples/demo",
+      "evidence": "没有 examples/ 或 demo，别人不知道怎么验证它好用",
+      "fix": "加一个最小可跑示例"
+    },
+    {
+      "rule": "MNT004",
+      "dimension": "D4",
+      "level": "error",
+      "passed": true,
+      "weight": 4,
+      "title": "无占位符残留",
+      "evidence": "无占位符",
+      "fix": ""
+    },
+    {
+      "rule": "MNT005",
+      "dimension": "D4",
+      "level": "warn",
+      "passed": true,
+      "weight": 4,
+      "title": "无垃圾文件",
+      "evidence": "无垃圾文件",
+      "fix": ""
+    },
+    {
+      "rule": "MNT006",
+      "dimension": "D4",
+      "level": "error",
+      "passed": true,
+      "weight": 4,
+      "title": "无明文密钥",
+      "evidence": "未发现明文密钥",
+      "fix": ""
+    }
+  ]
+}

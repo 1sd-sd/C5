@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>技能体检报告 · my-skill</title>
+<style>
+:root{--bg:#fbfaf7;--card:#fff;--ink:#1b1a17;--muted:#6b6862;--line:#e6e2d9;--ok:#2f7d45;--warn:#b06a00;--bad:#b3261e;--accent:#2f5d8a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:26px;margin:0 0 6px} .sub{color:var(--muted);font-size:13px}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:22px 0}
+.score{font-size:46px;font-weight:700;letter-spacing:-1px}
+.grade{display:inline-block;margin-left:10px;padding:3px 12px;border-radius:999px;background:#eef3ee;color:var(--ok);font-size:14px}
+.caps{background:#fdf3e7;border-left:3px solid var(--warn);padding:10px 14px;margin-top:14px;font-size:14px}
+.dim{margin:14px 0} .dim-head{display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px} .dim-head em{color:var(--muted);font-style:normal;font-size:12px}
+.track{height:8px;background:#efece5;border-radius:999px;overflow:hidden} .fill{height:100%;background:var(--accent);border-radius:999px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f4f1ea;font-weight:600;font-size:12.5px;color:var(--muted)}
+tr.bad td:nth-child(3){color:var(--bad);font-weight:600} tr.warn td:nth-child(3){color:var(--warn)} tr.ok td:nth-child(3){color:var(--ok)}
+code{font:12.5px/1.5 ui-monospace,Consolas,monospace;background:#f2efe8;padding:1px 5px;border-radius:4px}
+h2{font-size:17px;margin:30px 0 12px}
+.foot{color:var(--muted);font-size:12px;margin-top:28px}
+</style></head><body><div class="wrap">
+<h1>技能体检报告 · my-skill</h1>
+<div class="sub">skilllens · 输入 <code>examples\my-skill</code> · 2026-11-04 14:24 · 1 个文件</div>
+<div class="hero">
+  <div><span class="score">39</span><span class="grade">D 级 · FAIL</span></div>
+  <div class="sub" style="margin-top:6px">还不算一个技能，只是一个想法</div>
+  
+  <div style="margin-top:18px"><div class="dim"><div class="dim-head"><span>触发力 <em>D1</em></span><span>14/25 · 56%</span></div><div class="track"><div class="fill" style="width:56%"></div></div></div><div class="dim"><div class="dim-head"><span>结构 <em>D2</em></span><span>6/20 · 30%</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div><div class="dim"><div class="dim-head"><span>可执行 <em>D3</em></span><span>0/24 · 0%</span></div><div class="track"><div class="fill" style="width:0%"></div></div></div><div class="dim"><div class="dim-head"><span>可维护 <em>D4</em></span><span>17/25 · 68%</span></div><div class="track"><div class="fill" style="width:68%"></div></div></div></div>
+</div>
+<h2>检查明细（19 项）</h2>
+<table><thead><tr><th>规则</th><th>检查项</th><th>判定</th><th>证据</th><th>怎么改</th></tr></thead>
+<tbody><tr class="ok"><td><code>TRG001</code></td><td>frontmatter 可解析且含 name/description</td><td>通过</td><td>name=&#x27;my-skill&#x27;, description 12 字符</td><td>—</td></tr><tr class="ok"><td><code>TRG002</code></td><td>name 为 kebab-case 且与目录名一致</td><td>通过</td><td>my-skill</td><td>—</td></tr><tr class="warn"><td><code>TRG003</code></td><td>description 长度 80–1024 字符</td><td>建议修</td><td>description 仅 12 字符（&lt; 80，模型很难判断何时触发）</td><td>把&#x27;做什么+什么时候用+输入输出&#x27;压进 80–500 字</td></tr><tr class="warn"><td><code>TRG004</code></td><td>description 含触发语与用户原话</td><td>建议修</td><td>description 只描述功能，没有&#x27;什么时候用&#x27;的触发语</td><td>加 &#x27;适用于/Use when …&#x27; 并抄 2 条用户会说的话</td></tr><tr class="ok"><td><code>STR001</code></td><td>有 What/Purpose 段</td><td>通过</td><td>有 What/Purpose 段</td><td>—</td></tr><tr class="warn"><td><code>STR002</code></td><td>有 When to use 段</td><td>建议修</td><td>缺少 When to use（触发条件）</td><td>加 &#x27;## 什么时候用&#x27; 列 3 个场景</td></tr><tr class="bad"><td><code>STR003</code></td><td>有 Input 与 Output 段</td><td>必须修</td><td>缺少 Input/Output 段</td><td>分别加 &#x27;## 输入&#x27; &#x27;## 输出&#x27;</td></tr><tr class="warn"><td><code>STR004</code></td><td>Steps 至少 3 条</td><td>建议修</td><td>Steps 只有 2 条（&lt; 3，说明不够具体）</td><td>把流程拆成 3–7 条编号步骤</td></tr><tr class="warn"><td><code>STR005</code></td><td>说明所需工具/运行时</td><td>建议修</td><td>没有说明需要什么工具/运行时</td><td>加 &#x27;## 工具&#x27; 段</td></tr><tr class="bad"><td><code>EXE001</code></td><td>有代码块或 scripts/</td><td>必须修</td><td>既没有代码块也没有 scripts/，执行细节全靠脑补</td><td>把关键命令写成 ```bash 块</td></tr><tr class="bad"><td><code>EXE003</code></td><td>输入契约明确</td><td>必须修</td><td>没有 Input 段</td><td>给出输入格式/字段/示例</td></tr><tr class="warn"><td><code>EXE004</code></td><td>输出契约明确</td><td>建议修</td><td>没有 Output 段</td><td>给出产出格式与样例</td></tr><tr class="warn"><td><code>EXE005</code></td><td>有失败路径说明</td><td>建议修</td><td>没有失败路径说明（输入不合规时怎么办）</td><td>补一段&#x27;输入不合规时怎么办&#x27;</td></tr><tr class="ok"><td><code>MNT001</code></td><td>SKILL.md ≤ 500 行</td><td>通过</td><td>18 行</td><td>—</td></tr><tr class="ok"><td><code>MNT002</code></td><td>体积分层合理</td><td>通过</td><td>0KB</td><td>—</td></tr><tr class="warn"><td><code>MNT003</code></td><td>有 examples/demo</td><td>建议修</td><td>没有 examples/ 或 demo，别人不知道怎么验证它好用</td><td>加一个最小可跑示例</td></tr><tr class="bad"><td><code>MNT004</code></td><td>无占位符残留</td><td>必须修</td><td>SKILL.md 仍含占位符：TODO</td><td>删掉 TODO/待补充 并写实</td></tr><tr class="ok"><td><code>MNT005</code></td><td>无垃圾文件</td><td>通过</td><td>无垃圾文件</td><td>—</td></tr><tr class="ok"><td><code>MNT006</code></td><td>无明文密钥</td><td>通过</td><td>未发现明文密钥</td><td>—</td></tr></tbody></table>
+<div class="foot">分数算法：固定权重 + 维度归一化 + 红旗封顶。规则清单见仓库 docs/rules.md。</div>
+</div></body></html>

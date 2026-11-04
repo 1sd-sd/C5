@@ -1,0 +1,250 @@
+{
+  "tool": "skilllens",
+  "generated_at": "2026-11-04T14:24:31+08:00",
+  "package": {
+    "source": "..\\..\\C4技能分享\\lishengdan_C4_challenge-submission-checker.skill",
+    "kind": "zip",
+    "name": "challenge-submission-checker",
+    "files": 18,
+    "bytes": 49649,
+    "error": ""
+  },
+  "score": 60,
+  "grade": "C",
+  "verdict": "WARN",
+  "caps": [
+    "MNT004 → 封顶 60 分（占位符残留：交付物还是草稿）"
+  ],
+  "dimensions": [
+    {
+      "code": "D1",
+      "name": "触发力",
+      "earned": 19,
+      "possible": 25,
+      "percent": 76
+    },
+    {
+      "code": "D2",
+      "name": "结构",
+      "earned": 9,
+      "possible": 20,
+      "percent": 45
+    },
+    {
+      "code": "D3",
+      "name": "可执行",
+      "earned": 25,
+      "possible": 30,
+      "percent": 83
+    },
+    {
+      "code": "D4",
+      "name": "可维护",
+      "earned": 17,
+      "possible": 25,
+      "percent": 68
+    }
+  ],
+  "issues": [
+    {
+      "rule": "TRG001",
+      "dimension": "D1",
+      "level": "error",
+      "passed": true,
+      "weight": 8,
+      "title": "frontmatter 可解析且含 name/description",
+      "evidence": "name='challenge-submission-checker', description 1046 字符",
+      "fix": ""
+    },
+    {
+      "rule": "TRG002",
+      "dimension": "D1",
+      "level": "error",
+      "passed": true,
+      "weight": 6,
+      "title": "name 为 kebab-case 且与目录名一致",
+      "evidence": "challenge-submission-checker",
+      "fix": ""
+    },
+    {
+      "rule": "TRG003",
+      "dimension": "D1",
+      "level": "warn",
+      "passed": false,
+      "weight": 6,
+      "title": "description 长度 80–1024 字符",
+      "evidence": "description 1046 字符（> 1024，会被截断）",
+      "fix": "把'做什么+什么时候用+输入输出'压进 80–500 字"
+    },
+    {
+      "rule": "TRG004",
+      "dimension": "D1",
+      "level": "warn",
+      "passed": true,
+      "weight": 5,
+      "title": "description 含触发语与用户原话",
+      "evidence": "含触发线索 ['use when', 'whenever'] + 引号示例",
+      "fix": ""
+    },
+    {
+      "rule": "STR001",
+      "dimension": "D2",
+      "level": "error",
+      "passed": true,
+      "weight": 6,
+      "title": "有 What/Purpose 段",
+      "evidence": "有 What/Purpose 段",
+      "fix": ""
+    },
+    {
+      "rule": "STR002",
+      "dimension": "D2",
+      "level": "warn",
+      "passed": false,
+      "weight": 4,
+      "title": "有 When to use 段",
+      "evidence": "缺少 When to use（触发条件）",
+      "fix": "加 '## 什么时候用' 列 3 个场景"
+    },
+    {
+      "rule": "STR003",
+      "dimension": "D2",
+      "level": "error",
+      "passed": false,
+      "weight": 4,
+      "title": "有 Input 与 Output 段",
+      "evidence": "缺少 Output 段",
+      "fix": "分别加 '## 输入' '## 输出'"
+    },
+    {
+      "rule": "STR004",
+      "dimension": "D2",
+      "level": "warn",
+      "passed": false,
+      "weight": 3,
+      "title": "Steps 至少 3 条",
+      "evidence": "Steps 只有 0 条（< 3，说明不够具体）",
+      "fix": "把流程拆成 3–7 条编号步骤"
+    },
+    {
+      "rule": "STR005",
+      "dimension": "D2",
+      "level": "info",
+      "passed": true,
+      "weight": 3,
+      "title": "说明所需工具/运行时",
+      "evidence": "正文提到工具/运行时（可显式补一个 Tools 段）",
+      "fix": ""
+    },
+    {
+      "rule": "EXE001",
+      "dimension": "D3",
+      "level": "error",
+      "passed": true,
+      "weight": 8,
+      "title": "有代码块或 scripts/",
+      "evidence": "9 个代码块",
+      "fix": ""
+    },
+    {
+      "rule": "EXE002",
+      "dimension": "D3",
+      "level": "error",
+      "passed": true,
+      "weight": 6,
+      "title": "引用的本地文件都存在",
+      "evidence": "2 处引用全部存在",
+      "fix": ""
+    },
+    {
+      "rule": "EXE003",
+      "dimension": "D3",
+      "level": "error",
+      "passed": true,
+      "weight": 6,
+      "title": "输入契约明确",
+      "evidence": "Input 段 359 字符，含格式或示例",
+      "fix": ""
+    },
+    {
+      "rule": "EXE004",
+      "dimension": "D3",
+      "level": "warn",
+      "passed": false,
+      "weight": 5,
+      "title": "输出契约明确",
+      "evidence": "没有 Output 段",
+      "fix": "给出产出格式与样例"
+    },
+    {
+      "rule": "EXE005",
+      "dimension": "D3",
+      "level": "info",
+      "passed": true,
+      "weight": 5,
+      "title": "有失败路径说明",
+      "evidence": "提到失败/边界处理",
+      "fix": ""
+    },
+    {
+      "rule": "MNT001",
+      "dimension": "D4",
+      "level": "warn",
+      "passed": true,
+      "weight": 5,
+      "title": "SKILL.md ≤ 500 行",
+      "evidence": "170 行",
+      "fix": ""
+    },
+    {
+      "rule": "MNT002",
+      "dimension": "D4",
+      "level": "info",
+      "passed": true,
+      "weight": 4,
+      "title": "体积分层合理",
+      "evidence": "7KB",
+      "fix": ""
+    },
+    {
+      "rule": "MNT003",
+      "dimension": "D4",
+      "level": "warn",
+      "passed": true,
+      "weight": 4,
+      "title": "有 examples/demo",
+      "evidence": "有 examples/demo",
+      "fix": ""
+    },
+    {
+      "rule": "MNT004",
+      "dimension": "D4",
+      "level": "error",
+      "passed": false,
+      "weight": 4,
+      "title": "无占位符残留",
+      "evidence": "SKILL.md 仍含占位符：TODO, XXX, 占位符, 待补充",
+      "fix": "删掉 TODO/待补充 并写实"
+    },
+    {
+      "rule": "MNT005",
+      "dimension": "D4",
+      "level": "warn",
+      "passed": false,
+      "weight": 4,
+      "title": "无垃圾文件",
+      "evidence": "夹带垃圾文件：examples/demo-dirty/~$lishengdan_C4_skill说明.docx",
+      "fix": "打包前删除 ~$/tmp/.DS_Store"
+    },
+    {
+      "rule": "MNT006",
+      "dimension": "D4",
+      "level": "error",
+      "passed": true,
+      "weight": 4,
+      "title": "无明文密钥",
+      "evidence": "未发现明文密钥",
+      "fix": ""
+    }
+  ]
+}
